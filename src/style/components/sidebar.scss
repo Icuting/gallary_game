@@ -1,0 +1,75 @@
+
+.show {
+  background: url("../../image/Arrow-left.png");
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  opacity: 0.1;
+  background-position: center;
+  background-size: cover;
+  transform: rotate(180deg);
+  left: 0;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.hid {
+  background-image: url("../../image/Arrow-left.png");
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 250px;
+  opacity: 0.1;
+  background-position: center;
+  background-size: cover;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.sidebar {
+  max-width: 250px;
+  width: 250px;
+  box-shadow: 4px 0px 8px -3px $box-shadow;
+  height: 100%;
+  align-self: stretch;
+  &-none {
+    transition: 0.5s;
+    position: absolute;
+    transform: translateX(-100%);
+  }
+
+  &-content {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &-logo {
+      margin: auto;
+    }
+
+    &-nav {
+      &-list {
+        & li {
+          margin: 20px 0;
+        }
+
+        list-style-type: none;
+
+        &-link {
+          color: $color;
+
+          &:hover {
+            color: $color;
+          }
+        }
+      }
+    }
+  }
+}

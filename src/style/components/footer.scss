@@ -1,0 +1,11 @@
+.footer{
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 10px $box-shadow;
+  &-content{
+    &-copyright{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

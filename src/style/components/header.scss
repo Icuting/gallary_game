@@ -1,0 +1,97 @@
+.header{
+  max-width: 100%;
+  max-height: 70px;
+  padding: 3px;
+  box-shadow: 0 0 10px $box-shadow;
+  &-content{
+    height: 64px;
+    flex-wrap: wrap;
+    margin: 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-logo{
+      display: flex;
+      align-items: center;
+
+      & .logo-text{
+        background: url("../../image/Logotip.png");
+        width: 100px;
+        height: 64px;
+        background-size: cover;
+        background-position: center;
+        transform: rotate(8deg);
+      }
+    }
+    &-search{
+      height: 95%;
+      width: 40%;
+      //border: 1px solid $box-shadow;
+      &::before{
+        content: '';
+        width: 32px;
+        top: 1em;
+        left: 26%;
+        height: 32px;
+        position: absolute;
+        background: url("../../image/search_cat.png");
+        background-size: cover;
+        background-position: center;
+      }
+      &_input{
+        height: inherit;
+        width: 100%;
+        border: none;
+        font-size: 18px;
+      }
+    }
+    &-profile{
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &_avatar{
+        width: 32px;
+        height: 32px;
+        background: rgba(225, 201, 163, 092);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 8px;
+
+      }
+      & p{
+        margin: 0;
+      }
+    }
+    &-notification{
+      display: flex;
+      align-items: center;
+      border-right: 1px solid $box-shadow;
+      margin-right: 20px;
+      &-icon{
+        background-position: center;
+        background-size: 100%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+      & .badge-notification{
+        position: relative;
+        top: 0.6em;
+        right: 1em;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 1px 4px;
+        cursor: pointer;
+      }
+    }
+    &-user{
+      display: flex;
+    }
+  }
+}
+
+
