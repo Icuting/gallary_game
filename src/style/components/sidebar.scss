@@ -33,11 +33,10 @@
 }
 
 .sidebar {
-  max-width: 250px;
-  width: 250px;
+  max-width: 300px;
+  width: 300px;
+  min-width: 300px;
   box-shadow: 4px 0px 8px -3px $box-shadow;
-  height: 100%;
-  align-self: stretch;
   &-none {
     transition: 0.5s;
     position: absolute;
@@ -67,6 +66,7 @@
 
           &:hover {
             color: $color;
+            transition: 0.5s;
           }
         }
       }

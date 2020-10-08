@@ -1,0 +1,45 @@
+.progress-game{
+  margin: $margin-page;
+  &-all{
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      &-item{
+        border: 1px solid $box-shadow;
+        padding: 15px;
+        margin: 0 20px 20px 0;
+        &-title{
+          text-align: center;
+          border-bottom: 1px solid $box-shadow;
+        }
+        &-game{
+          text-align: right;
+        }
+        &-date{
+          text-align: right;
+        }
+      }
+    }
+  }
+  &-last{
+    &-list{
+      display: flex;
+      flex-wrap: wrap;
+      &-item{
+        border: 1px solid $box-shadow;
+        padding: 15px;
+        margin: 0 20px 20px 0;
+        &-title{
+          text-align: center;
+          border-bottom: 1px solid $box-shadow;
+        }
+        &-game{
+          text-align: right;
+        }
+        &-date{
+          text-align: right;
+        }
+      }
+    }
+  }
+}

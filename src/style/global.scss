@@ -3,18 +3,17 @@ html, body{
   padding: 0;
   height: 100%;
   width: 100%;
-  font-family: 'Andika', sans-serif;
+  font-family: 'Andika', sans-serif !important;
 }
 input:active, input:focus, button:active, button:focus{
   outline: none;
 }
-.App{
-  height: 100%;
-}
-
 #root{
-  height: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  height: 100%;
+}
+.content{
+  display: flex;
+  flex: 1 0 auto;
 }

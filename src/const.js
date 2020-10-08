@@ -4,5 +4,8 @@ export const PATH = {
     Authorization: '/sign-in/',
     About: '/about/',
     ListGame: '/list-game/',
-    Help: '/help/'
+    Help: '/help/',
+    Progress: '/progress/',
+    Faq: '/faq/',
+    HelpForm: '/help-form/',
 }

@@ -12,7 +12,7 @@ function App() {
       )
   }
   return (
-    <div className="App">
+    <>
       <BrowserRouter>
          <Switch>
            {routes.map((route, index) => {
@@ -34,8 +34,7 @@ function App() {
            })}
          </Switch>
       </BrowserRouter>
-
-    </div>
+    </>
   );
 }
 

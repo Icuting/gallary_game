@@ -7,6 +7,7 @@ const navLink = [
   {name: 'Главная', to: PATH.Home},
   {name: 'Профиль', to: PATH.Profile},
   {name: 'Галерея игр', to: PATH.ListGame},
+  {name: 'Достижения', to: PATH.Progress},
   {name: 'Помощь', to: PATH.Help},
   {name: 'О нас', to: PATH.About},
 ]
