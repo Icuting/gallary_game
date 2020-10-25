@@ -14,7 +14,7 @@ const navLink = [
 
 const Sidebar = (props) => {
   const [sidebar, setSidebar] = useState(false);
-  const sidebarMenu = sidebar ? 'show' : 'hid';
+  const sidebarMenu = sidebar ? 'open' : 'close';
   return (
     <>
       <div onClick={() => setSidebar(!sidebar)} className={`sidebar-show ${sidebarMenu}`}></div>

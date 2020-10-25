@@ -1,5 +1,5 @@
 
-.show {
+.open {
   background: url("../../image/Arrow-left.png");
   position: absolute;
   width: 32px;
@@ -10,13 +10,12 @@
   transform: rotate(180deg);
   left: 0;
   transition: 0.5s;
-
   &:hover {
     opacity: 1;
   }
 }
 
-.hid {
+.close {
   background-image: url("../../image/Arrow-left.png");
   position: absolute;
   width: 32px;

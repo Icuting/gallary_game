@@ -65,12 +65,38 @@
       & p{
         margin: 0;
       }
+      &-dropdown{
+        padding: 10px !important;
+        &-item{
+          display: inline-block;
+          font-size: 15px;
+          color: $colorGrey;
+          &:hover{
+            color: $colorGrey;
+          }
+        }
+      }
     }
     &-notification{
       display: flex;
       align-items: center;
       border-right: 1px solid $box-shadow;
       margin-right: 20px;
+      &-dropdown{
+        padding: 10px !important;
+        &-item{
+          text-align: center;
+          font-size: 15px;
+          padding: 5px;
+          color: $colorGrey;
+        }
+        &-button{
+          width: 100%;
+          padding: 3px;
+          font-size: 14px;
+          color: $colorGrey;
+        }
+      }
       &-icon{
         background-position: center;
         background-size: 100%;
@@ -93,5 +119,4 @@
     }
   }
 }
-
 

@@ -1,5 +1,7 @@
-@import './global.scss';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 @import './variables.scss';
+@import './global.scss';
 @import './components/header.scss';
 @import './components/sidebar.scss';
 @import './bootstrap.scss';
@@ -10,3 +12,7 @@
 @import './page/help.scss';
 @import './page/profile.scss';
 @import './page/progress.scss';
+@import 'components/common/faq.scss';
+@import "./components/common/feedbackForm.scss";
+@import './components/common/popularGame.scss';
+@import './components/common/allGame.scss';

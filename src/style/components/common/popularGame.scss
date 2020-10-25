@@ -1,0 +1,18 @@
+.slider-popular-game{
+  width: 90%;
+  margin: $margin-page auto;
+  &-item{
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    background: $color-orange-pale;
+  }
+}
+.slick-current{
+  box-shadow: 0px 0px 25px 0px rgba(179, 0, 255, 0.92);
+  margin: 0 10px;
+  position: relative;
+  top: 10px;
+  border: none !important;
+  outline: none !important;
+}

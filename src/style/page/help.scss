@@ -1,1 +1,8 @@
-
+.help{
+  margin: $margin-page;
+  .help-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

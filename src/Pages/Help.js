@@ -1,16 +1,32 @@
-import React from "react";
-import { NavLink } from 'react-router-dom'
-import {PATH} from "../const";
+import React, {useState} from "react";
+import { Faq, FeedbackForm } from "../components/common";
 
-const Help = ({children}) => {
-  return(
+const Help = (props) => {
+  const [content, setContent] = useState(<Faq/>);
+  const faqContent = () =>{
+    setContent(<Faq/>)
+  }
+  const helpContent = () =>{
+    setContent(<FeedbackForm/>)
+  }
+  return (
     <div className={'help'}>
       <div className={'help-nav'}>
-        <NavLink to={PATH.Faq} >FAQ</NavLink>
-        <NavLink to={PATH.HelpForm} >Возникли проблемы?</NavLink>
+        <button
+          type={'button'}
+          onClick={faqContent}
+          className={'help-nav-faq main-button'}>
+          FAQ
+        </button>
+        <button
+          type={'button'}
+          onClick={helpContent}
+          className={'help-nav-problem main-button'}>
+          Возникли проблемы?
+        </button>
       </div>
       <div className={'help-content'}>
-        {children}
+        {content}
       </div>
     </div>
   )

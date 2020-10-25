@@ -16,7 +16,6 @@ function App() {
       <BrowserRouter>
          <Switch>
            {routes.map((route, index) => {
-             console.log(route.component)
              return (
                <Route
                  key={index}

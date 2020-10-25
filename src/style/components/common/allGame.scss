@@ -1,0 +1,47 @@
+.all-game{
+  margin: $margin-page;
+  &-title{
+
+  }
+  &-list{
+    display: flex;
+    flex-wrap: wrap;
+    &-item{
+      border: 1px solid $box-shadow;
+      margin: 15px 10px;
+      width: 30%;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      &-image{
+        background: $color-orange-pale;
+        min-height: 150px;
+        height: 150px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-name{
+        margin: 10px;
+      }
+      &-date{
+        font-size: 12px;
+        color: $colorGrey;
+        text-align: end;
+        &-update{
+          color: #228B22;
+          font-size: 14px;
+          display: block;
+        }
+      }
+      &-description{
+        font-size: 14px;
+      }
+      &-text{
+        padding: 0 10px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,34 @@
+.faq-collapse-questions{
+  width: 90%;
+  margin: 20px;
+  border: 3px solid $colorDarkCyan;
+  padding: 1em;
+  border-radius: 7px;
+  &-button{
+    width: 100%;
+    background: $background-transparent;
+    border: none;
+    text-align: start;
+    &:after{
+      content: '';
+      background-image: url("../../../image/plus.png");
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      left: 80%;
+    }
+  }
+  &-collapse{
+    text-align: left;
+    margin-top: 1em;
+    border-top: 1px solid $box-shadow;
+    padding-top: 1em;
+  }
+  &-content{
+    &-author{
+      font-size: 16px;
+      text-align: end;
+      color: $colorGrey;
+    }
+  }
+}

@@ -5,9 +5,15 @@ html, body{
   width: 100%;
   font-family: 'Andika', sans-serif !important;
 }
-input:active, input:focus, button:active, button:focus{
-  outline: none;
+input:active,
+input:focus,
+button:active,
+button:focus,
+textarea:focus,
+textarea:active{
+  outline: none !important;
 }
+
 #root{
   display: flex;
   flex-direction: column;
@@ -16,4 +22,26 @@ input:active, input:focus, button:active, button:focus{
 .content{
   display: flex;
   flex: 1 0 auto;
+}
+.main-content{
+  width: 100%;
+  overflow-x: hidden;
+}
+.main-button{
+  background: $background-transparent;
+  border: 3px solid $color-orange-pale;
+  border-radius: 10px;
+  width: 30%;
+  padding: 8px;
+  transition: 1s;
+  &:hover{
+    border-color: $colorDarkCyan;
+  }
+}
+
+.dropdown-toggle::after{
+  display: none !important;
+}
+.dropdown-toggle::before{
+  display: none !important;
 }
