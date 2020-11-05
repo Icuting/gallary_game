@@ -1,0 +1,88 @@
+.profile{
+  margin-top: $margin-page;
+  &-wrapper{
+  padding: 0 3%;
+    display: flex;
+  }
+  &-info{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &-avatar{
+      width: 256px;
+      height: 256px;
+    }
+    &-main-info{
+      width: 100%;
+      margin: 10px 0;
+      & .info-data{
+        border-bottom: 1px solid $box-shadow;
+        font-size: 15px;
+        color: $darkText;
+      }
+    }
+    &-progress{
+      margin-top: 2em;
+      & h5{
+        text-align: center;
+      }
+      &-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+      }
+      &-item{
+        width: 32px;
+        height: 32px;
+        margin: 0 5px;
+        &-icon:hover + .profile-info-progress-item-description{
+          display: block;
+        }
+        &-description{
+          display: none;
+          border: 1px solid $box-shadow;
+          border-radius: 3px;
+          background: #fff;
+          position: absolute;
+          padding: 3px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &-all-info{
+    width: 70%;
+    padding-left: 30px;
+    &-wrapper{
+      margin-top: $margin-page;
+      display: flex;
+      justify-content: space-around;
+    }
+    &-progressbar{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      & h5{
+        font-size: 17px;
+        color: $darkText;
+      }
+    }
+    &-actions{
+      margin-top: $margin-page;
+      display: flex;
+      justify-content: space-around;
+    }
+    &-edit{
+      margin-top: $margin-page;
+      display: flex;
+      justify-content: space-evenly;
+      & a{
+        font-size: 18px;
+      }
+    }
+  }
+  &-progress-bar{
+    width: 100px;
+    height: 100px;
+  }
+}

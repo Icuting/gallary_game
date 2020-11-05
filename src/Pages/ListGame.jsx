@@ -1,6 +1,5 @@
 import React from "react";
-import { PopularGame } from "../components/common";
-import AllGame from "../components/common/AllGame";
+import { PopularGame, AllGame } from "../components/MainComponents";
 
 const ListGame = () =>{
   return(

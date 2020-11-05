@@ -1,0 +1,37 @@
+.form-main-textarea, .form-main-input{
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  &-field{
+    width: 100%;
+    padding: 15px;
+    //box-sizing: unset;
+    font-size: 16px;
+    transition: 0.5s;
+    border: none;
+    border-bottom: 1px solid $colorGrey;
+    border-top: 1px solid $colorGrey;
+    &:valid + label,
+    &:focus + label {
+      font-size: 14px;
+      top: -20px;
+      font-weight: 300;
+    }
+    &:focus, &:valid{
+      border-top: 3px solid $colorDarkCyan;
+      border-bottom: 3px solid $colorDarkCyan;
+    }
+  }
+  & label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    display: block;
+    margin: 0;
+    cursor: pointer;
+    color: $colorGrey;
+    transition: 0.5s;
+  }
+}

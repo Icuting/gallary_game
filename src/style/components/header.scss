@@ -1,19 +1,32 @@
 .header{
+  grid-area: header;
   max-width: 100%;
-  max-height: 70px;
   padding: 3px;
-  box-shadow: 0 0 10px $box-shadow;
+  @include xxxl {
+    max-height: 80px;
+  }
+  @include xxl{
+    max-height: 64px;
+  }
   &-content{
     height: 64px;
     flex-wrap: wrap;
     margin: 0 2em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    @include xxxl{
+      height: 80px;
+    }
+    @include xxl{
+      height: 64px;
+    }
+    @include mob{
+      justify-content: space-around;
+    }
     &-logo{
       display: flex;
       align-items: center;
-
       & .logo-text{
         background: url("../../image/Logotip.png");
         width: 100px;
@@ -21,28 +34,66 @@
         background-size: cover;
         background-position: center;
         transform: rotate(8deg);
+        @include xxxl{
+          width: 120px;
+          height: 80px;
+        }
+        @include xxl{
+          width: 100px;
+          height: 64px;
+        }
+        @include lg{
+          width: 80px;
+          height: 55px;
+        }
       }
     }
     &-search{
-      height: 95%;
+      height: 2.5em;
       width: 40%;
-      //border: 1px solid $box-shadow;
-      &::before{
-        content: '';
-        width: 32px;
-        top: 1em;
-        left: 26%;
-        height: 32px;
+      position: relative;
+      @include mob{
+        display: none;
+      }
+      &_label{
+        width: 2.5em;
+        height: 2.5em;
         position: absolute;
-        background: url("../../image/search_cat.png");
-        background-size: cover;
+        top: 0;
+        left: 0;
+        border-right: 1px solid $box-shadow;
+        opacity: 0.5;
+        background-image: url("../../image/search.png");
+        background-size: 120%;
         background-position: center;
+        transition: .5s;
       }
       &_input{
         height: inherit;
         width: 100%;
-        border: none;
-        font-size: 18px;
+        padding-left: 46px;
+        border: 1px solid $box-shadow;
+        border-radius: 25px;
+        font-size: 14px;
+        //&:valid + label,
+        //&:focus + label {
+        //
+        //}
+        //@include xxxl{
+        //  font-size: 1.2rem;
+        //}
+        //@include xxxm{
+        //  font-size: 1.1rem;
+        //}
+        //@include xxl{
+        //  font-size: 1em;
+        //}
+        //@include vg{
+        //  font-size: 14px;
+        //}
+        //@include lg{
+        //  font-size: 12px;
+        //}
       }
     }
     &-profile{
@@ -60,7 +111,26 @@
         font-size: 18px;
         font-weight: 600;
         margin-right: 8px;
-
+        @include xxxl{
+          width: 50px;
+          height: 50px;
+        }
+        @include xxxm{
+          width: 40px;
+          height: 40px;
+        }
+        @include xxl{
+          width: 35px;
+          height: 35px;
+        }
+        @include vg{
+          width: 30px;
+          height: 30px;
+        }
+        @include lg{
+          width: 25px;
+          height: 25px;
+        }
       }
       & p{
         margin: 0;
@@ -71,6 +141,15 @@
           display: inline-block;
           font-size: 15px;
           color: $colorGrey;
+          @include xxxl{
+            font-size: 1rem;
+            letter-spacing: -1px;
+            line-height: 2rem;
+          }
+          @include md{
+            letter-spacing: 0;
+            font-size: 9px;
+          }
           &:hover{
             color: $colorGrey;
           }
@@ -89,12 +168,32 @@
           font-size: 15px;
           padding: 5px;
           color: $colorGrey;
+          @include xxxl{
+            font-size: 1.2rem;
+            padding: 5px 40px;
+          }
+          @include xxxm{
+            font-size: 1rem;
+            padding: 5px 40px;
+          }
+           @include md{
+            font-size: 10px;
+          }
         }
         &-button{
           width: 100%;
           padding: 3px;
           font-size: 14px;
           color: $colorGrey;
+          @include xxxl{
+            font-size: 1.2rem;
+          }
+          @include xxxm{
+            font-size: 1rem;
+          }
+          @include md{
+            font-size: 10px;
+          }
         }
       }
       &-icon{
@@ -103,6 +202,27 @@
         width: 32px;
         height: 32px;
         cursor: pointer;
+        opacity: 0.5;
+        @include xxxl{
+          width: 45px;
+          height: 45px;
+        }
+        @include xxxm{
+          width: 40px;
+          height: 40px;
+        }
+        @include xxl{
+          width: 35px;
+          height: 35px;
+        }
+        @include vg{
+          width: 30px;
+          height: 30px;
+        }
+        @include lg{
+          width: 25px;
+          height: 25px;
+        }
       }
       & .badge-notification{
         position: relative;
@@ -112,10 +232,38 @@
         font-weight: 500;
         padding: 1px 4px;
         cursor: pointer;
+        @include xxxl{
+          font-size: 1.2rem;
+          right: 0.8em;
+        }
+        @include xxxm{
+          font-size: 1.1rem;
+          right: 0.9em;
+        }
+        @include xxl{
+          font-size: 1rem;
+        }
+        @include vg{
+          font-size: 14px;
+        }
+        @include lg{
+          font-size: 10px;
+          right: 1em;
+        }
+        @include md{
+          font-size: 8px;
+          right: 1.3em;
+          top: 0.8em;
+        }
       }
     }
     &-user{
+      border: 1px solid $box-shadow;
+      border-radius: 25px;
+      height: 2.7em;
+      padding: 0 20px;
       display: flex;
+      align-items: center;
     }
   }
 }

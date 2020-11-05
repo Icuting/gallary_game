@@ -1,9 +1,6 @@
-import React from "react";
-import Slider from 'react-slick'
-import {v4} from "uuid";
-import {formatData} from "../../../utils/help-data-format";
-
-const game = ['игра', 'игра1', 'игра2', 'игра3', 'игра4', 'игра5', 'игра6', 'игра7',]
+import React from 'react'
+import { v4 } from 'uuid'
+import { formatData } from '../../../utils/help-data-format'
 const allGameList = [
   {
     name: 'Поймай слона',
@@ -36,33 +33,19 @@ const allGameList = [
     description: 'Описание игры Описание игры Описание игры Описание игры Описание игры Описание игры Описание игры'
   }
 ]
-const PopularGame = () => {
-  const settings = {
-    accessibility: true,
-    arrows: true,
-    className: "center",
-    centerMode: true,
-    infinite: true,
-    centerPadding: "50px",
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    speed: 500
-  };
-  return (
-    <div className={'slider-popular-game'}>
-      <Slider {...settings}>
-        {/*{game.map(item =>{*/}
-        {/*  return(*/}
-        {/*    <div className={'slider-popular-game-item'}>{item}</div>*/}
-        {/*  )*/}
-        {/*})}*/}
-        {allGameList.map(item =>{
+
+const AllGame = (props) =>{
+  return(
+    <div className={'all-game'}>
+      <h4 className={'all-game-title'}>Все игры</h4>
+      <div className={'all-game-list'}>
+        {allGameList.map((item, index) =>{
           return(
-            <div className={'all-game-list-item'}>
+            <div key={index} className={'all-game-list-item'}>
               <div className={'all-game-list-item-image'}>
                 <h6 className={'all-game-list-item-name'}>{item.name}</h6>
                 <p className={'all-game-list-item-date'} >
-                  Последнее обновление:
+                   Последнее обновление:
                   <span className={'all-game-list-item-date-update'}>{formatData(item.dateUpdate, 'L')}</span>
                 </p>
               </div>
@@ -74,8 +57,8 @@ const PopularGame = () => {
             </div>
           )
         })}
-      </Slider>
+      </div>
     </div>
   )
 }
-export default PopularGame
+export default AllGame

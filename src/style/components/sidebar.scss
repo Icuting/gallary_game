@@ -1,12 +1,36 @@
 
 .open {
-  background: url("../../image/Arrow-left.png");
-  position: absolute;
+  background-image: url("../../image/close_sidebar.png");
+  position: fixed;
   width: 32px;
   height: 32px;
+  top: 2%;
+  right: 5%;
   opacity: 0.1;
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.5s;
+  z-index: 1000;
+  display: none;
+  @include mob{
+    display: block;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.close {
+  background: url("../../image/Arrow-left.png");
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  top: 2%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   transform: rotate(180deg);
   left: 0;
   transition: 0.5s;
@@ -14,42 +38,60 @@
     opacity: 1;
   }
 }
-
-.close {
-  background-image: url("../../image/Arrow-left.png");
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 250px;
-  opacity: 0.1;
-  background-position: center;
-  background-size: cover;
-  transition: 0.5s;
-
-  &:hover {
-    opacity: 1;
-  }
-}
-
 .sidebar {
-  max-width: 300px;
-  width: 300px;
-  min-width: 300px;
+  grid-area: sidebar;
+  max-width: 250px;
+  width: 250px;
+  min-width: 250px;
   box-shadow: 4px 0px 8px -3px $box-shadow;
+  transition: .5s;
+  @include mob{
+    height: 100%;
+    font-size: 16px;
+    background: #fff;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
   &-none {
     transition: 0.5s;
     position: absolute;
     transform: translateX(-100%);
   }
-
   &-content {
     padding: 1em;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-
+    width: 100%;
+    @include mob{
+      align-items: center;
+    }
+    &-search{
+      margin-top: 2em;
+      width: 60%;
+      display: none;
+      @include mob{
+        display: block;
+      }
+      & .form-main-input{
+        width: 100%;
+        & label{
+          left: 40%;
+        }
+      }
+    }
     &-logo {
       margin: auto;
+      & img {
+        width: 60px;
+        height: 60px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
     }
 
     &-nav {

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 import {Badge, Dropdown} from 'react-bootstrap'
-import notificationIcon from '../../../image/alarm_notification.png';
+import notificationIcon from '../../../image/notification123203.png';
 import {v4} from 'uuid'
 
 const Notification = (props) => {

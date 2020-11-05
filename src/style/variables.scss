@@ -4,6 +4,7 @@ $box-shadow: #c2c2c2;
 $color: #3d3b3b;
 $color-orange-pale: rgba(255, 160, 122, 0.5);
 $margin-page: 2em;
+$darkText: #242424;
 $background-transparent: transparent;
 $colorGrey: #708090;
 $colorDarkCyan: #008B8B;
@@ -17,9 +18,23 @@ $lg-width: 1100.98px;
 $vg-width: 1399.98px;
 $xl-width: 1469.98px;
 $xxl-width: 1601.98px;
+$xxxm-width: 1921.98px;
+$xxxl-width: 2201.98px;
 
 @mixin lg-only {
   @media screen and (min-width: #{$lg-width}) {
+    @content;
+  }
+}
+
+@mixin xxxl {
+  @media screen and (max-width: #{$xxxl-width}) {
+    @content;
+  }
+}
+
+@mixin xxxm {
+  @media screen and (max-width: #{$xxxm-width}) {
     @content;
   }
 }

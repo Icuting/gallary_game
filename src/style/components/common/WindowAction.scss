@@ -1,0 +1,24 @@
+.window-actions{
+  margin: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  border-radius: 7px;
+  border: 1px solid $box-shadow;
+  & h5{
+    margin-bottom: 1em;
+    color: $darkText;
+  }
+  &-button{
+    width: 100%;
+    font-size: 14px;
+  }
+  & p{
+    text-align: center;
+    color: $box-shadow;
+    font-size: 14px
+  }
+}

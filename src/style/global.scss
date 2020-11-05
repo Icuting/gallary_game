@@ -4,6 +4,18 @@ html, body{
   height: 100%;
   width: 100%;
   font-family: 'Andika', sans-serif !important;
+  @include xxxl { 
+    font-size: 1.1rem !important;
+  }
+  @include xxxm { 
+    font-size: 1rem !important;
+  }
+  @include lg{
+    font-size: 13px !important;
+  }
+  @include md{
+    font-size: 11px !important;
+  }
 }
 input:active,
 input:focus,
@@ -15,11 +27,20 @@ textarea:active{
 }
 
 #root{
-  display: flex;
-  flex-direction: column;
+  display: grid;
   height: 100%;
+  grid-template-columns: 250px 1fr 1fr;
+  grid-template-rows: 64px 1fr 50px;
+  grid-template-areas:
+          'sidebar header header'
+          'sidebar content content'
+          'footer footer footer'
+  //display: flex;
+  //flex-direction: column;
+
 }
 .content{
+  grid-area: content;
   display: flex;
   flex: 1 0 auto;
 }
@@ -32,6 +53,7 @@ textarea:active{
   border: 3px solid $color-orange-pale;
   border-radius: 10px;
   width: 30%;
+  margin-top: 10px;
   padding: 8px;
   transition: 1s;
   &:hover{

@@ -8,4 +8,6 @@ export const PATH = {
     Progress: '/progress/',
     Faq: '/faq/',
     HelpForm: '/help-form/',
+    EditProfile: '/edit-profile',
+    ChangePassword: '/change-password',
 }

@@ -1,4 +1,8 @@
 import React from "react";
+import Input from "../../FieldComponetns/Input";
+import { v4 } from 'uuid';
+import TextArea from "../../FieldComponetns/TextArea";
+
 
 class FeedbackForm extends React.Component {
   constructor(props) {
@@ -14,32 +18,20 @@ class FeedbackForm extends React.Component {
           время
         </h5>
         <form className={'feedback-form'}>
-          <div className={'feedback-form-group-theme'}>
-            <input
-              id={'input_theme'}
-              className={'feedback-form_input'}
-              required={true}
-              type={'text'}/>
-            <label htmlFor={'input_theme'}>
-              Тема возникшей проблемы
-            </label>
-          </div>
-          <div className={'feedback-form-group-description'}>
-            <textarea required={true} id={'input_description'} className={'feedback-form_textarea'}/>
-            <label htmlFor={'input_description'}>
-              Опишите возникшую проблему
-            </label>
-          </div>
-          <div className={'feedback-form-group-email'}>
-            <input
-              id={'input_email'}
-              className={'feedback-form_input'}
-              required={true}
-              type={'text'}/>
-            <label htmlFor={'input_email'}>
-              Email
-            </label>
-          </div>
+            <Input
+              id={v4()}
+              type={'text'}
+              name={'Тема возникшей проблемы'}
+            />
+            <TextArea
+              id={v4()}
+              name={'Опишите возникшую проблему'}
+            />
+            <Input
+              type={'text'}
+              id={v4()}
+              name={'Email'}
+            />
           <div className={'feedback-form-group-screenshot'}>
             <div className={'circle-animation'}>
             </div>

@@ -1,9 +1,13 @@
-import Faq from "./Faq";
-import FeedbackForm from "./FeedbackForm";
-import PopularGame from "./PopularGame";
+import WindowActions from "./WindowActions";
+import ProfileData from "./ProfileData";
+import ProfileProgress from "./ProfileProgress";
+import ProfileInfoProgressBar from "./ProfileInfoProgressBar";
+import ProfileActions from './ProfileActions';
 
 export {
-  Faq,
-  FeedbackForm,
-  PopularGame,
+  WindowActions,
+  ProfileData,
+  ProfileProgress,
+  ProfileInfoProgressBar,
+  ProfileActions,
 }

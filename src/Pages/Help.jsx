@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Faq, FeedbackForm } from "../components/common";
+import { Faq, FeedbackForm } from "../components/MainComponents";
 
 const Help = (props) => {
   const [content, setContent] = useState(<Faq/>);
